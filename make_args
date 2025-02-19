@@ -1,0 +1,6 @@
+LIBNETTLE_FORLINK=libnettle_dummy.so
+LIBHOGWEED_FORLINK=nettle.lib.so
+LIBHOGWEED_LIBS=
+LIBHOGWEED_LINK=$(CC) $(LDFLAGS) $(nettle_OBJS) $(filter-out -l:posix.lib.so,$(AUTOCONF_SHARED_LINKER_FLAGS))
+nettle.lib.so
+install-headers
